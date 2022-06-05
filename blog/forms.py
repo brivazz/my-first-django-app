@@ -6,7 +6,7 @@ from .models import Tag, Post
 class TagForm(forms.ModelForm):
     class Meta:
         model = Tag
-        fields = ['title', 'slug'] # либо можно написать '__all__'
+        fields = ['title', 'slug']  # либо можно написать '__all__'
 
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control'}),
@@ -27,7 +27,7 @@ class PostForm(forms.ModelForm):
     class Meta:
         model = Post
         fields = ['title', 'slug', 'body', 'tags']
-        
+
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control'}),
             'slug': forms.TextInput(attrs={'class': 'form-control'}),
